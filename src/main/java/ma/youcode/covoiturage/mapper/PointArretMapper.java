@@ -14,6 +14,8 @@ public interface PointArretMapper {
     @Mapping(target = "trajet", ignore = true)
     PointArret toEntity(PointArretRequest request);
 
+    PointArretRequest toRequest(PointArret pointArret);
+
     @BeanMapping(ignoreUnmappedSourceProperties = {"trajet"})
     PointArretResponse toResponse(PointArret pointArret);
 }
